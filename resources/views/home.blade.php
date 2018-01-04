@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<task></task>
+    <router-view></router-view>
 @endsection
