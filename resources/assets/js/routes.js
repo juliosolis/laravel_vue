@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 import Task from './components/Task.vue';
 import Profile from './components/Profile.vue';
+import App from './components/App.vue';
 
 
 let routes = [
@@ -11,6 +12,10 @@ let routes = [
     {
         path: '/profile',
         component: Profile
+    },
+    {
+        path: '/cruds',
+        component: App
     }
 ];
 

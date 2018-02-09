@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::resource('/cruds', 'CrudsController', [
+    'except' => ['edit', 'show', 'store']
+]);

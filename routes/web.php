@@ -11,6 +11,9 @@
 |
 */
 
+use App\User;
+use Illuminate\Support\Facades\Hash;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +23,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/task', 'TaskController');
+
+Route::get('/crud', 'CrudsController@listing');

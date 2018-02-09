@@ -19,10 +19,23 @@ Vue.use(VueRouter);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('task', require('./components/Task.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('task', require('./components/Task.vue'));
+
+/*const app = new Vue({
+    el: '#app',
+    router,
+});*/
+
+import App from './components/App.vue';
+
+let initialState = JSON.parse(window.__INITIAL_STATE__);
+console.log(initialState);
 
 const app = new Vue({
     el: '#app',
-    router,
+    components: {
+        App
+    },
+    render: h => h(App)
 });
