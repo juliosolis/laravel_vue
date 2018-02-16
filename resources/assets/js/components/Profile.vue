@@ -8,7 +8,7 @@
                     </div>
 
                     <div class="panel-body">
-
+                        This is empty for now
                     </div>
                 </div>
             </div>

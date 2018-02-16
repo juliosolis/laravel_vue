@@ -7,11 +7,8 @@
 
 require('./bootstrap');
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import router from './routes';
 
 window.Vue = Vue;
-Vue.use(VueRouter);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -19,10 +16,15 @@ Vue.use(VueRouter);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('task', require('./components/Task.vue'));
+import App from './components/App.vue';
+
+let initialState = JSON.parse(window.__INITIAL_STATE__);
+console.log(initialState);
 
 const app = new Vue({
     el: '#app',
-    router,
+    components: {
+        App
+    },
+    render: h => h(App)
 });
